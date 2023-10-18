@@ -48,13 +48,16 @@ be able to play all your favorite retro consoles in one place.
 <div class="fragment">
 
 <img  src="static/media/retro_fusion.gif" width="700" height="Auto">
+
 <br>
 
-<a style="color:#E2DCC8;"
-    href="https://github.com/jensjpedersen/RetroFusion"> <img
-    style="vertical-align:middle" src="static/icons/github.svg" width="60"
-    height="60"> 
+
+<a href="https://github.com/jensjpedersen/RetroFusion"> 
+    <img style="vertical-align:middle" src="static/icons/github.svg" width="Auto" height="100"> 
 </a>
+
+
+
 
 
 </div>
@@ -106,28 +109,150 @@ be able to play all your favorite retro consoles in one place.
 <div id="right">
 
 <a class="fragment" href="https://github.com/jensjpedersen/FYS-STK4155-Applied_Data_Analysis_and_Machine_Learning/tree/main/Project1"> 
-    <img style="vertical-align:middle" src="static/icons/github.svg" width="60" height="60"> 
+    <img style="vertical-align:middle" src="static/icons/github.svg" width="Auto" height="150"> 
 </a>
 
 </div>
 
 </section>
 
+
 <!---------------------------------------->
 <section>
-<h1 style="color:red"> Project 3 </h1>
+<h1> Project 2 - Feed Forward Neural Network (FFNN) </h1>
 
 
-<!-- <section data-background-image="static/media/terrain_data_and_model_ols_best.png", data-background-size="contain"> -->
+
+<div class="r-stack">
+
+
+    <ul class="fragment fade-out">
+        <li> In this project we did develop our own Feed-Forward Neural Network (FFNN) code. </li> 
+        <li>
+            This project was an exercise in tuning and finding the optimal hyper parameters for binary classification on the Wisconsin Breast Cancer dataset. 
+        </li>
+    </ul>
+
+
+    <div class="fragment fade-in-then-out" style="position: absolute">
+        We did rigorus testing of different activation fuctions on the hidden layers
+        (sigmoid, RELU and Leaky RELU),
+        <br>
+
+        <img src="static/media/d_line_activation_hidden.png" width="Auto" height="400">
+
+    </div>
+
+
+    <div class="fragment fade-in-then-out" style="position: absolute">
+
+        , different tuning methods (manual, adagrad, rmsprop, adam) and momentum, $ \lambda  $ 
+
+        <br>
+
+        <img src="static/media/d_heatmap_test_momentum_vs_tuning.png" width="Auto" height="400">
+        
+
+    </div>
+
+    <div class="fragment fade-in-then-out" style="position: absolute">
+        <ul>
+            <li>different bias initializations, </li> 
+            <li>different learning rates and batch sizes </li>
+            <li>and different number of hidden layers and nodes.</li>
+        </ul>
+
+
+    </div>
+
+    
+</div>
+
+
+<!-- *show heatmap* --> 
+
+
+<!-- different learning rates, different batch -->
+
 
 
 
 
 </section>
 
+<!---------------------------------------->
+<section>
 
 
 
+
+
+
+
+
+<div id="left">
+
+After tuning the network with the following parameters: 
+
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>Learning rate, $\eta$ </td>
+    <td>0.001</td>
+  </tr>
+  <tr>
+    <td># of hidden layers, d</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td># of nodes / hidden layer, w</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Activation function (hidden layer)</td>
+    <td>Sigmoid</td>
+  </tr>
+  <tr>
+    <td>Momentum, $ \gamma   $ </td>
+    <td>0.9</td>
+  </tr>
+  <tr>
+    <td>L2-regularization, $ \lambda  $ </td>
+    <td>0.01</td>
+  </tr>
+  <tr>
+    <td>Tuning method</td>
+    <td>Adagrad</td>
+  </tr>
+  <tr>
+    <td># of mini batches</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>Epochs</td>
+    <td>300</td>
+  </tr>
+</table>
+
+</div>
+
+
+
+<div id="right" class="fragment">
+    We got an accuracy score of: 
+    \[\begin{aligned}
+    Acc &= \frac{\sum_{i=1}^{n} I(t_i - y_i )}{n} \\ &= 0.9825
+    \end{aligned}\]
+</div>
+
+
+
+
+
+</section>
 
 
 
@@ -142,17 +267,20 @@ be able to play all your favorite retro consoles in one place.
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
-		<script>
+        <script src="plugin/math/math.js"></script>
+        <script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+            Reveal.initialize({
+                hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax2]
+            });
+        </script>
+
+
 	</body>
 </html>
 <!-- }}} -->
