@@ -1,7 +1,4 @@
-# Presentation - The importance of pursuing your goals
+# Presentation - Short presentation of myself
 
-* [Presentation](https://jensjpedersen.github.io/Goals/)
+* [Presentation](https://jensjpedersen.github.io/hello_there/)
 
-A short presentation about the importance of goal setting. 
-Where I argue why the pursuit of goals is the single most effective thing you can do
-to improve you subjective well-being.  
